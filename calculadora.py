@@ -25,7 +25,7 @@ while True:
             break
     elif operacion.lower()  == "c":
         numero_uno = input(f"haz elegido: {operacion}, Cual es el primer numero: ")
-        numero_dos = input(f"ok, elegiste {numero_uno}, Cual es el segundo numero: ")
+        numero_dos = input(f"ok, elegiste {numero_uno},  ")
         ecuacion = float(numero_uno) - float(numero_dos)
         print(f"el resultado de tu operacion Resta es: {ecuacion:.2f}")
 
