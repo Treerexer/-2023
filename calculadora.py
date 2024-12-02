@@ -29,7 +29,7 @@ while True:
         ecuacion = float(numero_uno) - float(numero_dos)
         print(f"el resultado de tu operacion Resta es: {ecuacion:.2f}")
 
-        again = input("quieres hacer otra operacion: si o no: ")
+        again = input("вы хотите сделать еще одну операцию: да или нет: ")
         if again == "si":
             continue
         else:
