@@ -13,7 +13,7 @@ while True:
                       "contesta con la letra: ")
     
     if operacion.lower() == "b":
-        numero_uno = input(f"haz elegido: {operacion}, Cual es el primer numero: ")
+        numero_uno = input(f"сделай свой выбор: {operacion}, Какое первое число: ")
         numero_dos = input(f"ok, elegiste {numero_uno}, Cual es el segundo numero: ")
         ecuacion = float(numero_uno) + float(numero_dos)
         print(f"el resultado de tu operacion Suma es: {ecuacion:.2f}")
