@@ -1,12 +1,12 @@
 import math, cmath
 
-signs = [  "▛▔A▔▜ \n  % \n▙▃ ▃▟\n",
-          "\n▛▔B▔▜ \n  + \n▙▃ ▃▟\n",
-          "\n▛▔C▔▜ \n  - \n▙▃ ▃▟\n",
-          "\n▛▔D▔▜ \n  / \n▙▃ ▃▟\n",
-          "\n▛▔E▔▜ \n  x \n▙▃ ▃▟\n",
-          "\n▛▔F▔▜ \n  √ \n▙▃ ▃▟\n",
-          "\n▛▔G▔▜ \n  x^ \n▙▃ ▃▟\n"]
+signs = [  "▛▔A▔▜ \n % \n▙▃ ▃▟\n",
+          "\n▛▔B▔▜ \n + \n▙▃ ▃▟\n",
+          "\n▛▔C▔▜ \n - \n▙▃ ▃▟\n",
+          "\n▛▔D▔▜ \n / \n▙▃ ▃▟\n",
+          "\n▛▔E▔▜ \n x \n▙▃ ▃▟\n",
+          "\n▛▔F▔▜ \n √ \n▙▃ ▃▟\n",
+          "\n▛▔G▔▜ \n x^ \n▙▃ ▃▟\n"]
 
 while True:
     operation = input(f"que tipo de operaciones quieres hacer ?\n{signs[0]}{signs[1]}{signs[2]}{signs[3]}{signs[4]}{signs[5]}{signs[6]} \n"
@@ -82,7 +82,6 @@ while True:
             valor = input("cual es el exponente ")
             ecuacion = pow(float(numero),float(valor))
             print(f"la potenciacion al {valor} de {numero} es {ecuacion}")
-
 
     else:
         print("Нужен ответ, если вы не хотите продолжать или вы допустили ошибку в написании, напишите: нет")
