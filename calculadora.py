@@ -1,6 +1,6 @@
 import math, cmath
 
-signos = [  "▛▔A▔▜ \n  % \n▙▃ ▃▟\n",
+signs = [  "▛▔A▔▜ \n  % \n▙▃ ▃▟\n",
           "\n▛▔B▔▜ \n  + \n▙▃ ▃▟\n",
           "\n▛▔C▔▜ \n  - \n▙▃ ▃▟\n",
           "\n▛▔D▔▜ \n  / \n▙▃ ▃▟\n",
@@ -9,56 +9,40 @@ signos = [  "▛▔A▔▜ \n  % \n▙▃ ▃▟\n",
           "\n▛▔G▔▜ \n  x^ \n▙▃ ▃▟\n"]
 
 while True:
-    operacion = input(f"que tipo de operaciones quieres hacer ?\n{signos[0]}{signos[1]}{signos[2]}{signos[3]}{signos[4]}{signos[5]}{signos[6]} \n"
+    operation = input(f"que tipo de operaciones quieres hacer ?\n{signs[0]}{signs[1]}{signs[2]}{signs[3]}{signs[4]}{signs[5]}{signs[6]} \n"
                       "contesta con la letra: ")
     
-    if operacion.lower() == "b":
-        numero_uno = input(f"haz elegido: {operacion}, Cual es el primer numero: ")
+    if operation.lower() == "b":
+        numero_uno = input(f"haz elegido: {operation}, Cual es el primer numero: ")
         numero_dos = input(f"ok, elegiste {numero_uno}, Cual es el segundo numero: ")
         ecuacion = float(numero_uno) + float(numero_dos)
         print(f"el resultado de tu operacion Suma es: {ecuacion:.2f}")
 
-        again = input("quieres hacer otra operacion: si o no: ")
-        if again == "si":
-            continue
-        else:
-            break
-    elif operacion.lower()  == "c":
-        numero_uno = input(f"haz elegido: {operacion}, Cual es el primer numero: ")
+
+    elif operation.lower() == "c":
+        numero_uno = input(f"haz elegido: {operation}, Cual es el primer numero: ")
         numero_dos = input(f"ok, elegiste {numero_uno}, Cual es el segundo numero: ")
         ecuacion = float(numero_uno) - float(numero_dos)
         print(f"el resultado de tu operacion Resta es: {ecuacion:.2f}")
 
-        again = input("quieres hacer otra operacion: si o no: ")
-        if again == "si":
-            continue
-        else:
-            break
-    elif operacion.lower()  == "d":
-        numero_uno = input(f"haz elegido: {operacion}, Cual es el primer numero: ")
+
+    elif operation.lower() == "d":
+        numero_uno = input(f"haz elegido: {operation}, Cual es el primer numero: ")
         numero_dos = input(f"ok, elegiste {numero_uno}, Cual es el segundo numero: ")
         ecuacion = float(numero_uno) / float(numero_dos)
         print(f"el resultado de tu operacion Division es: {ecuacion:.2f}")
 
-        again = input("quieres hacer otra operacion: si o no: ")
-        if again == "si":
-            continue
-        else:
-            break
-    elif operacion.lower()  == "e":
-        numero_uno = input(f"haz elegido: {operacion}, Cual es el primer numero: ")
+
+    elif operation.lower() == "e":
+        numero_uno = input(f"haz elegido: {operation}, Cual es el primer numero: ")
         numero_dos = input(f"ok, elegiste {numero_uno}, Cual es el segundo numero: ")
         ecuacion = float(numero_uno) * float(numero_dos)
         print(f"el resultado de tu operacion Multiplicacion es: {ecuacion:.2f}")
 
-        again = input("quieres hacer otra operacion: si o no: ")
-        if again == "si":
-            continue
-        else:
-            break
-    elif operacion.lower()  == "f":
+
+    elif operation.lower() == "f":
         try:
-            numero_uno = input(f"haz elegido: {operacion}, Cual es el numero: ")
+            numero_uno = input(f"haz elegido: {operation}, Cual es el numero: ")
             a = math.sqrt(float(numero_uno))
             print(f"el resultado de tu Raiz Cuadrada es: {a:.2f}")
         except:
@@ -66,12 +50,8 @@ while True:
             b = cmath.sqrt(float(numero_uno))
             print(f"el resultado de tu operacion con Numeros Imaginarios es: {b}")
 
-        again = input("quieres hacer otra operacion: si o no: ")
-        if again == "si":
-            continue
-        else:
-            break
-    elif operacion.lower()  == "a":
+
+    elif operation.lower()  == "a":
         cantidad = input("cual es la cantidad principal: ")
         porcentaje = input("cual es el porcentaje ")
         ecuacion = (float(cantidad) * float(porcentaje)) / 100
@@ -89,12 +69,8 @@ while True:
         elif float(cantidad) > 0 or float(porcentaje) > 0: 
             print(f"el resultado de Sacar el Porcentaje es ${ecuacion:.2f}")
 
-        again = input("quieres hacer otra operacion: si o no: ")
-        if again == "si":
-            continue
-        else:
-            break
-    elif operacion.lower()  == "g":
+
+    elif operation.lower() == "g":
         pregunta = input("es una raiz cuadrada, si o no ")
 
         if pregunta == "si":
@@ -107,16 +83,12 @@ while True:
             ecuacion = pow(float(numero),float(valor))
             print(f"la potenciacion al {valor} de {numero} es {ecuacion}")
 
-        again = input("quieres hacer otra operacion: si o no: ")
-        if again == "si":
-            continue
-        else:
-            break
-    else:
-        print("nesecito que me respondas, si no quieres o fue un error lo que escribiste, solo comenta: no")
 
-        again = input("quieres hacer alguna operacion: si o no: ")
-        if again == "si":
-            continue
-        else:
-            break
+    else:
+        print("Нужен ответ, если вы не хотите продолжать или вы допустили ошибку в написании, напишите: нет")
+
+    again = input("Хотите провести ещё одну операцию: да или нет: ")
+    if again.lower() == "да":
+        continue
+    else:
+        break
